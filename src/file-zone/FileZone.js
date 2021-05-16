@@ -44,7 +44,7 @@ class FileZone extends Component {
         const renderText = this.state.arrayOfWords ? this.state.arrayOfWords.map((word, idx) => {
            return (
                 word && word.active ?
-                    <SelectedText key={idx}>{word.text} </SelectedText> :
+                    <SelectedText key={idx} elementClicked={() => this.addSelectedComponent(idx)}>{word.text} </SelectedText> :
                     <span key={idx}
                           onDoubleClick={() => this.addSelectedComponent(idx)}>{word.text} </span>
            )}) : null;

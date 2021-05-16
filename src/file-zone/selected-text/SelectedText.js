@@ -70,8 +70,9 @@ export default class SelectedText extends Component {
                              changeWord={this.changeWord}>{this.state.synonymous}</TextTooltip>
                          }>
                     <span className={classNames}
-                          style={{cursor: 'pointer'}}
-                          >{this.state.selectedWord}&nbsp;</span>
+                        onDoubleClick={() => this.props.elementClicked()}
+                        style={{cursor: 'pointer'}}
+                        >{this.state.selectedWord}&nbsp;</span>
                 </Tooltip>
             </Fragment>
         )
